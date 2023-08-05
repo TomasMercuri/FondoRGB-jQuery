@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo RGB</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="./../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body style="background-color: rgb(128, 128, 128);">
+    <div class="container d-flex justify-content-center align-items-center flex-column p-5 mt-5">
+        <div class="colores bg-transparent py-2 px-5 rounded d-flex flex-column w-100 shadow-lg border">
+            <i class="bi bi-clipboard fs-3" data-clipboard-target="#rgba" style="cursor: pointer; width: 24px;"></i>
+            <section class="d-flex flex-column align-items-center my-4">
+                <label class="text-danger">ROJO (R)</label>
+                <input type="range" class="rojo w-100" max="255">
+                <span class="valor-rojo valor">128</span>
+            </section>
+            <section class="d-flex flex-column align-items-center my-4">
+                <label class="text-success">VERDE (G)</label>
+                <input type="range" class="verde w-100" max="255">
+                <span class="valor-verde valor">128</span>
+            </section>
+            <section class="d-flex flex-column align-items-center my-4">
+                <label class="text-primary">AZUL (B)</label>
+                <input type="range" class="azul w-100" max="255">
+                <span class="valor-azul valor">128</span>
+            </section>
+            <section class="d-flex flex-column align-items-center my-4">
+                <label class="text-dark">ALPHA (A)</label>
+                <input type="range" class="alfa w-100" max="1" step="0.1" value="1">
+                <span class="valor-alfa valor">1</span>
+            </section>
+        </div>
+        <div class="copiar bg-transparent border rounded shadow-lg py-3 px-4 mt-4">
+            <p id="rgba" class="bg-light rounded px-3 py-2 m-0 fs-4">
+                <span class="text-warning">rgba</span>
+                (
+                <span id="rojo" class="text-danger">128</span>, <span id="verde" class="text-success">128</span>, <span id="azul" class="text-primary">128</span>, <span id="alfa">1</span>
+                )
+            </p>
+        </div>
+        <div class="mensaje bg-success py-3 px-4 rounded-pill mt-4 opacity-0" style="transition: all 0.8s ease;">
+            <p class="text-white m-0">El texto fue copiado correctamente <i class="bi bi-check-circle-fill"></i></p>
+        </div>
+    </div>
+
+
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/31da694c45.js" crossorigin="anonymous"></script>
+    <script src="./../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>
+    <script src="main-jquery.js"></script>
+</body>
+</html>
